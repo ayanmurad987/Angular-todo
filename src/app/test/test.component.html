@@ -1,0 +1,10 @@
+<div class="mainDiv">
+    <h1 class="title">Todo</h1>
+    <input class="input" (change)="onChange($event)" [value]="inputText" />
+    <button (click)="addData()">Add</button>
+    <ul *ngFor="let val of heroes; index as i">
+        <li>{{val}}</li>
+        <button (click)="dltData(i)">Delete</button>
+        <button (click)="editData(i)">Edit</button>
+    </ul>
+</div>
